@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:id="@+id/menuopen"
+        android:title="Open">
+    </item>
+    <item
+        android:id="@+id/menudelete"
+        android:title="Delete  File">
+    </item>
+    <item
+        android:id="@+id/menurun"
+        android:icon="@drawable/ic_action_play"
+        android:showAsAction="ifRoom"
+        android:title="Run">
+    </item>
+    <item
+        android:id="@+id/menuReplace"
+        android:title="Replace">
+    </item>
+    <item
+        android:id="@+id/menutffind"
+        android:title="Find">
+    </item>
+    <item
+        android:id="@+id/menuHide"
+        android:icon="@drawable/ic_action_stop"
+        android:showAsAction="ifRoom"
+        android:title="Hide Options">
+    </item>
+
+</menu>

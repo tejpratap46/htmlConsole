@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.imoviesong.htmlconsole"
+    android:versionCode="4"
+    android:versionName="2.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="html console"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.imoviesong.htmlconsole.MainActivity"
+            android:label="html console" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.textfile"
+            android:label="html console" >
+            <intent-filter>
+                <action android:name="android.intent.action.TEXTFILE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="*"
+                    android:pathPattern=".*\\.html"
+                    android:scheme="file" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWhenNarrow" />
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.examples"
+            android:label="Examples" >
+            <intent-filter>
+                <action android:name="android.intent.action.EXAMPLES" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.tagsclass"
+            android:label="Tags" >
+            <intent-filter>
+                <action android:name="android.intent.action.TAGSCLASS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.websource"
+            android:label="Web Source" >
+            <intent-filter>
+                <action android:name="android.intent.action.WEBSOURCE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.file_list"
+            android:label="Files" >
+            <intent-filter>
+                <action android:name="android.intent.action.FILE_LIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.texthtml"
+            android:label="text2html" >
+            <intent-filter>
+                <action android:name="android.intent.action.TEXTHTML" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.full"
+            android:label="html console" >
+            <intent-filter>
+                <action android:name="android.intent.action.FULL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.color"
+            android:label="html console" >
+            <intent-filter>
+                <action android:name="android.intent.action.COLOR" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.help"
+            android:label="html console" >
+            <intent-filter>
+                <action android:name="android.intent.action.HELP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.imoviesong.htmlconsole.mainpage"
+            android:label="html console" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAINPAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.imoviesong.htmlconsole.RegexTester"
+            android:label="@string/title_activity_regex_tester" >
+        </activity>
+    </application>
+
+</manifest>

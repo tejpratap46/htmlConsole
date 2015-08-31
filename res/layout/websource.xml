@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TabHost
+        android:id="@+id/thWebhtm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#D4DDE4" >
+
+                    <TextView
+                        android:id="@+id/tvGetWebTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FF184C85" >
+
+                        <EditText
+                            android:id="@+id/etWeburl"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="#D4DDE4"
+                            android:ems="10"
+                            android:hint="Enter A web Url"
+                            android:inputType="textUri" />
+
+                        <Button
+                            android:id="@+id/bWebGo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="Go" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FF1C5FA6" >
+
+                        <Button
+                            android:id="@+id/bWebBack"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Back" />
+
+                        <Button
+                            android:id="@+id/bWebForward"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Forward" />
+
+                        <Button
+                            android:id="@+id/bWebRefresh"
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Reload" />
+                    </LinearLayout>
+
+                    <WebView
+                        android:id="@+id/wvWebhtml"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
+                        android:background="#D4DDE4" />
+
+                    <com.google.android.gms.ads.AdView
+                        android:id="@+id/adViewWeb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        ads:adSize="BANNER"
+                        ads:adUnitId="a1532ed82f46569" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#FF1C5FA6"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/bWebGo1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Get source"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/bWebSourceCopy"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Copy"
+                            android:textColor="#FFFFFF" />
+
+                        <Button
+                            android:id="@+id/bViewInText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Read Mode"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                    <HorizontalScrollView
+                        android:id="@+id/hsvWebSourceEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <EditText
+                            android:id="@+id/etWebhtml"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#D4DDE4"
+                            android:gravity="top"
+                            android:hint="Get HTML Source Code Here, Click on the 'Get source button'"
+                            android:inputType="textMultiLine" />
+                    </HorizontalScrollView>
+                    
+                    <HorizontalScrollView
+                        android:id="@+id/hsvWebSourcetv"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                        
+                        <TextView
+                            android:id="@+id/tvWebhtml"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#D4DDE4"
+                            android:gravity="top"
+                            android:hint="Get HTML Source Code Here, Click on the 'Get source button'" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
